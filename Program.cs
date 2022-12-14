@@ -10,16 +10,16 @@ namespace ConsoleApp1
 
     internal class Program
     {
-        private static int f(int n) 
+        private static int f(int n)  //費式數列採遞迴做法。
         {
-            if (n == 1 || n == 0) //假設 n=1,0回傳n值。
+            if (n == 1 || n == 0) 
                 return n;
             else
-                return f(n - 1) + f(n - 2);  //費式數列，數字為前兩個數相加。
+                return f(n - 1) + f(n - 2); 
         }
         static void Main(string[] args)   
         {
-            Console.WriteLine("f(n):");
+            Console.WriteLine("Input : ");
             string number = Console.ReadLine();
             int range = 0;
             int.TryParse(number, out range); 
