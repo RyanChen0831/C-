@@ -10,12 +10,12 @@ namespace ConsoleApp1
 
     internal class Program
     {
-        private static int f(int n)  //費式數列採遞迴做法。
+        private static int f(int n)
         {
             if (n == 1 || n == 0) 
                 return n;
             else
-                return f(n - 1) + f(n - 2); 
+                return f(n - 1) + f(n - 2);  //費式數列，前兩數相加為後一數。
         }
         static void Main(string[] args)   
         {
@@ -24,8 +24,8 @@ namespace ConsoleApp1
             int range = 0;
             int.TryParse(number, out range); 
 
-            for (int i = 1; i <= range; i++)
-                Console.WriteLine(f(i)+"(第"+i+"個數字)");
+            for (int n = 1; n <= range; n++)
+                Console.WriteLine(f(n)+"(第"+n+"個數字)");
         }
 
     }
